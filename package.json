@@ -1,0 +1,23 @@
+{
+  "name": "pull-join",
+  "description": "sql like join with pull-streams",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dominictarr/pull-join",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dominictarr/pull-join.git"
+  },
+  "dependencies": {
+    "binary-map": "~0.1.0",
+    "pull-through": "~1.0.12",
+    "pull-stream": "~2.25.0"
+  },
+  "devDependencies": {
+    "interleavings": "~0.3.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Dominic Tarr <dominic.tarr@gmail.com> (http://dominictarr.com)",
+  "license": "MIT"
+}
