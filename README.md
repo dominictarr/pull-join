@@ -24,18 +24,30 @@ pull(
       {key: 'c', value: 30},
       {key: 'd', value: 40}
     ])
+    //optional third argument
+    //, map(key, left, right)
   ),
   pull.collect(function (err, ary) {
-    console.log(ary)
 
-    //[{left: 1, right: 10}
+    console.log(ary)
+    //[{key: 'a', left: 1, right: 10}
     //...
 
   })
 )
-
-
 ```
+
+## pull(left, right, map(key, leftV, rightV)?)
+
+Join the values from two streams. Each item in the `left` and `right`
+pull streams must be of the form `{key, value}`.
+the right stream will be buffered entirely, and then the keys
+coming in on the right stream will be matched to it. If you know
+which stream will less data, make that the left one.
+
+`map` is a function that returns a single value.
+this will be the output of the stream. by default,
+map will return an object like `{key, left, right}`
 
 ## License
 
